@@ -1,12 +1,12 @@
 "# TFAcademy" 
 
-#Token ¸¸µé±â
+#Token ë§Œë“¤ê¸°
 
-- 1. Æ®À§ÅÍ ¸µÅ©·Î faucet ½ÅÃ»ÇÏ±â.
+- 1. íŠ¸ìœ„í„° ë§í¬ë¡œ faucet ì‹ ì²­í•˜ê¸°.
 
 https://www.rinkeby.io/#faucet 
 
-- 2. truffle package ¼³Ä¡ÇÏ±â
+- 2. truffle package ì„¤ì¹˜í•˜ê¸°
 
 https://www.trufflesuite.com/docs/truffle/quickstart
 
@@ -17,11 +17,11 @@ cd mytoken
 truffle init
 ```
 
-- 3. openzepplin ¼³Ä¡ÇÏ±â
+- 3. openzepplin ì„¤ì¹˜í•˜ê¸°
 
 `npm install zeppelin-solidity`
 
-- 4. myToken ÄÁÆ®·¢Æ® ÀÛ¼º
+- 4. myToken ì»¨íŠ¸ë™íŠ¸ ì‘ì„±
 
 ```
 contract/mytoken.sol
@@ -29,23 +29,23 @@ migrations/2_deploy_mytoken.js
 ```
 
 
-- 5. ÄÁÆ®·¢ ºôµå / µğÇÃ·ÎÀÌ
+- 5. ì»¨íŠ¸ë™ ë¹Œë“œ / ë””í”Œë¡œì´
 
-truffle.js (or truffle-config.js) ¿¡ rinkeby config ³Ö±â.
+truffle.js (or truffle-config.js) ì— rinkeby config ë„£ê¸°.
 
 ```
 truffle deploy --network rinkeby
 ```
 
-contract address ¿¡¼­ explorer¿¡¼­ token contract È®ÀÎÇÏ±â.
+contract address ì—ì„œ explorerì—ì„œ token contract í™•ì¸í•˜ê¸°.
 
-- 6. explorer ¿¡¼­ ¿À³ÊÁÖ¼Ò / contract ÁÖ¼Ò È®ÀÎÇÏ±â
+- 6. explorer ì—ì„œ ì˜¤ë„ˆì£¼ì†Œ / contract ì£¼ì†Œ í™•ì¸í•˜ê¸°
 
 https://rinkeby.etherscan.io/
 
-- 7. MyetherWallet ¿¡¼­ rinkeby network ¼±ÅÃÇÏ°í, ÅäÅ« È®ÀÎÇÏ±â.
+- 7. MyetherWallet ì—ì„œ rinkeby network ì„ íƒí•˜ê³ , í† í° í™•ì¸í•˜ê¸°.
 
-- 8. ÅäÅ« º¸³»°í ¹Ş±â.
+- 8. í† í° ë³´ë‚´ê³  ë°›ê¸°.
 
-
+- Truffle ì—ì„œ ABI ë¥¼ extract í•˜ê¸° ìœ„í•´ì„œ, https://github.com/trustfarm-dev/truffle-export-abi ì°¸ì¡°í• ê²ƒ
 

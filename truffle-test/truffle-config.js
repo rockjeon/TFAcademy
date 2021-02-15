@@ -32,10 +32,13 @@ const WalletProvider = require("truffle-hdwallet-provider");
 // const Wallet = require('ethereumjs-wallet');
 
 var rinkebyPrivateKeys = ["5f59240f2ecefc221a12692cf40ee5bc9178ae88b53d2d6b7baad13732112f22"];
+var krwlocalPrivateKeys = [" -- insert your private key --"];
 //, "hex");
 //var rinkebyWallet = Wallet.fromPrivateKey(rinkebyPrivateKey);
 var rinkebyProvider = new WalletProvider(rinkebyPrivateKeys, "https://rinkeby.infura.io/");
-
+var ropstenProvider = new WalletProvider(rinkebyPrivateKeys, "https://ropsten.infura.io/v3/");
+var ethmainProvider = new WalletProvider(rinkebyPrivateKeys, "https://api.myetherwallet.com/eth");
+var krwlocalProvider = new WalletProvider(krwlocalPrivateKeys, "http://127.0.0.1:8545/");
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -58,13 +61,37 @@ module.exports = {
       host: "127.0.0.1",     // Localhost (default: none)
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
+      //from: "0x0000000000000000000000000000000000000001",
+      provider: krwlocalProvider
+    },
+    krwcoin: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      gas: 4600000,
+      gasPrice: 20000000000,
+      //from: "0x0000000000000000000000000000000000000001",
+      provider: krwlocalProvider
     },
     rinkeby: {
       provider: rinkebyProvider,
       gas: 4600000,
       gasPrice: 20000000000,
       network_id: "4",
+    },
+    ropsten: {
+      provider: ropstenProvider,
+      gas: 8500000,
+      gasPrice: 20000000000,
+      network_id: "3",
+    },
+    mainnet: {
+      provider: ethmainProvider,
+      gas: 8500000,
+      gasPrice: 20000000000,
+      network_id: "1",
     }
+
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
@@ -105,11 +132,11 @@ module.exports = {
       version: "0.4.24",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
-        optimizer: {
-          enabled: true,
-          runs: 200
-        },
-        evmVersion: "byzantium"
+      //  optimizer: {
+      //    enabled: true,
+      //    runs: 200
+      //  },
+      //  evmVersion: "byzantium"
       
     }
   }
